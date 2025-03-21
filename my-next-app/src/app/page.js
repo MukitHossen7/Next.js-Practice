@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Event from "./components/Event";
 
 // export default function Home() {
 //   return (
@@ -102,8 +103,9 @@ import Image from "next/image";
 
 const Home = () => {
   return (
-    <div>
+    <div className="flex flex-col justify-center items-center h-screen">
       <h1>Home page</h1>
+      <Event></Event>
     </div>
   );
 };
