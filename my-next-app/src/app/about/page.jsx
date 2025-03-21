@@ -12,10 +12,10 @@ const About = () => {
         functionality. It is just a placeholder for the About page.
       </p>
       <button
-        onClick={() => router.push("/")}
+        onClick={() => router.push("about/company")}
         className="bg-blue-700 px-4 py-2"
       >
-        Default
+        Company
       </button>
     </div>
   );
