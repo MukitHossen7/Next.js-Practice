@@ -1,4 +1,9 @@
 import { Roboto } from "next/font/google";
+
+export const metadata = {
+  title: "Home",
+  description: "This is a Home page.",
+};
 const roboto = Roboto({
   subsets: ["latin"],
   display: "swap",

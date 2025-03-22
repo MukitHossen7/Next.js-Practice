@@ -2,7 +2,10 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React from "react";
-
+// export const metadata = {
+//   title: "Home",
+//   description: "This is a Home page.",
+// };
 const About = () => {
   const router = useRouter();
   return (
