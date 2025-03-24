@@ -16,3 +16,9 @@ export const DELETE = (req, value) => {
     return NextResponse.json({ message: "not valid" }, { status: 404 });
   }
 };
+
+export const PUT = async (req, value) => {
+  const payload = await req.json();
+  console.log(payload);
+  return NextResponse.json({ massage: "success" }, { status: 200 });
+};
