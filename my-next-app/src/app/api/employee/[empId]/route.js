@@ -7,3 +7,12 @@ export const GET = (req, value) => {
   console.log(empId);
   return NextResponse.json(employee, { status: 200 });
 };
+
+export const DELETE = (req, value) => {
+  const deleteId = value.params.empId;
+  if (deleteId) {
+    return NextResponse.json({ message: "successful" }, { status: 200 });
+  } else {
+    return NextResponse.json({ message: "not valid" }, { status: 404 });
+  }
+};
