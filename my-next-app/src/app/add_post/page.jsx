@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { employee } from "./../../DB/DBDatabase";
 
 const AddPost = () => {
   const [name, setName] = useState("");
