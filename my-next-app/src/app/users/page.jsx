@@ -8,6 +8,7 @@ async function userData() {
 }
 const Users = async () => {
   const users = await userData();
+  console.log(process.env.admin);
   return (
     <div className="">
       <h2 className="text-2xl text-center py-2">

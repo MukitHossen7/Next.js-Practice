@@ -1,0 +1,1 @@
+export const connectionString = `mongodb+srv://${process.env.NEXT_PUBLIC_USERNAME}:${process.env.NEXT_PUBLIC_USERPASS}@cluster0.qbgt9.mongodb.net/next_blog?retryWrites=true&w=majority&appName=Cluster0`;
