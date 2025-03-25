@@ -1,25 +1,37 @@
 "use client";
 
 import { useState } from "react";
+import { employee } from "./../../DB/DBDatabase";
 
 const AddPost = () => {
   const [name, setName] = useState("");
   const [authorName, setAuthorName] = useState("");
   const [price, setPrice] = useState("");
   const [email, setEmail] = useState("");
-  const handleSubmit = () => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    const priceValue = Number(price);
     const postData = {
       name,
-      authorName,
-      price,
+      author_name: authorName,
       email,
+      price: priceValue,
     };
-    console.log(postData);
+    const response = await fetch("http://localhost:3000/api/post_post", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(postData),
+    });
+    const responseData = await response.json();
+    if (responseData.massage === "success") {
+      alert("successful Add");
+    } else [alert("Error")];
   };
   return (
     <div>
-      <div className="max-w-md mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg">
+      <div className="max-w-md mx-auto mt-10 p-6 bg-white text-black shadow-lg rounded-lg">
         <h2 className="text-xl font-bold mb-4">Add New Post</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <input

@@ -8,5 +8,5 @@ export const POST = async (req) => {
   await mongoose.connect(connectionString);
   const newPost = new BlogPostModel(payload);
   await newPost.save();
-  return NextResponse.json({ massage: "success" });
+  return NextResponse.json({ massage: "success" }, { status: 200 });
 };
