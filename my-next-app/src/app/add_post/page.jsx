@@ -26,6 +26,10 @@ const AddPost = () => {
     const responseData = await response.json();
     if (responseData.massage === "success") {
       alert("successful Add");
+      setName("");
+      setAuthorName("");
+      setPrice("");
+      setEmail("");
     } else [alert("Error")];
   };
   return (

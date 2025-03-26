@@ -19,3 +19,14 @@ export const GET = async (req, res) => {
   const getPost = await BlogPostModel.findById(id);
   return NextResponse.json(getPost);
 };
+
+export const DELETE = async (req, res) => {
+  const getId = res.params.postId;
+  const id = { _id: getId };
+  await mongoose.connect(connectionString);
+  const getPost = await BlogPostModel.findByIdAndDelete(id);
+  return NextResponse.json({
+    success: true,
+    massage: "post deleted successfully",
+  });
+};

@@ -12,6 +12,23 @@ const Post = () => {
   useEffect(() => {
     fetchPostData();
   }, []);
+  const handleDelete = async (deleteId) => {
+    console.log(deleteId);
+    const response = await fetch(
+      `http://localhost:3000/api/get_post/${deleteId}`,
+      {
+        method: "DELETE",
+      }
+    );
+    const data = await response.json();
+    if (data.success) {
+      alert("Post Deleted Successfully");
+      const filterData = post.filter((value) => value._id !== deleteId);
+      setPost(filterData);
+    } else {
+      alert("Error Deleted Post");
+    }
+  };
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-20 px-10">
       {post.map((value) => (
@@ -30,6 +47,12 @@ const Post = () => {
           <Link href={`post/${value._id}`}>
             <button className="bg-teal-600 px-4 py-2 rounded-md">Edit</button>
           </Link>
+          <button
+            onClick={() => handleDelete(value._id)}
+            className="bg-red-500 px-4 py-2 rounded-md"
+          >
+            Delete
+          </button>
         </div>
       ))}
     </div>
