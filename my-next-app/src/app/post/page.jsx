@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -36,6 +37,14 @@ const Post = () => {
           key={value._id}
           className="bg-white rounded-2xl shadow-lg p-6 border border-gray-200"
         >
+          <div>
+            <Image
+              alt={value.name}
+              src={value.image}
+              height={400}
+              width={400}
+            ></Image>
+          </div>
           <h2 className="text-2xl font-bold text-gray-800">{value?.name}</h2>
           <p className="text-gray-600 mt-2">
             by <span className="font-semibold">{value?.author_name}</span>

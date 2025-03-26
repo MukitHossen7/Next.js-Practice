@@ -5,6 +5,7 @@ const postModel = new mongoose.Schema({
   author_name: { type: String, required: true },
   email: { type: String, required: true },
   price: { type: Number, required: true },
+  image: { type: String, required: true },
 });
 
 export const BlogPostModel =

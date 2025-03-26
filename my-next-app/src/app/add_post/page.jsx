@@ -7,6 +7,7 @@ const AddPost = () => {
   const [authorName, setAuthorName] = useState("");
   const [price, setPrice] = useState("");
   const [email, setEmail] = useState("");
+  const [image, setImage] = useState("");
   const handleSubmit = async (e) => {
     e.preventDefault();
     const priceValue = Number(price);
@@ -15,6 +16,7 @@ const AddPost = () => {
       author_name: authorName,
       email,
       price: priceValue,
+      image,
     };
     const response = await fetch("http://localhost:3000/api/post_post", {
       method: "POST",
@@ -30,6 +32,7 @@ const AddPost = () => {
       setAuthorName("");
       setPrice("");
       setEmail("");
+      setImage("");
     } else [alert("Error")];
   };
   return (
@@ -62,6 +65,15 @@ const AddPost = () => {
             onChange={(e) => setEmail(e.target.value)}
             className="w-full p-2 border border-gray-300 rounded"
             placeholder="Email"
+            required
+          />
+          <input
+            type="text"
+            name="image"
+            value={image}
+            onChange={(e) => setImage(e.target.value)}
+            className="w-full p-2 border border-gray-300 rounded"
+            placeholder="Images"
             required
           />
           <input
