@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const Post = () => {
@@ -26,6 +27,9 @@ const Post = () => {
           <p className="text-lg font-semibold text-green-600 mt-4">
             Price: ${value?.price}
           </p>
+          <Link href={`post/${value._id}`}>
+            <button className="bg-teal-600 px-4 py-2 rounded-md">Edit</button>
+          </Link>
         </div>
       ))}
     </div>
