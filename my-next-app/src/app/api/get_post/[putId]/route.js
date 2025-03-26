@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 import { NextResponse } from "next/server";
 
 export const PUT = async (req, res) => {
-  const id = res.params.postId;
+  const id = res.params.putId;
   const payload = await req.json();
   await mongoose.connect(connectionString);
   const updatePost = await BlogPostModel.findByIdAndUpdate(id, payload);
