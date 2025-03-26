@@ -4,9 +4,10 @@ import mongoose from "mongoose";
 import { NextResponse } from "next/server";
 
 export const PUT = async (req, res) => {
-  const id = res.params.putId;
+  const idValue = res.params.putId;
+  const id = { _id: idValue };
   const payload = await req.json();
   await mongoose.connect(connectionString);
-  const updatePost = await BlogPostModel.findByIdAndUpdate(id, payload);
-  return NextResponse.json({ success: true, data: updatePost });
+  const updatePost = await BlogPostModel.findOneAndUpdate(id, payload);
+  return NextResponse.json({ success: true });
 };
