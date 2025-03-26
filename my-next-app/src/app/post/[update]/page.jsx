@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const UpdatePost = ({ params }) => {
@@ -9,7 +10,7 @@ const UpdatePost = ({ params }) => {
     email: "",
     price: "",
   });
-
+  const router = useRouter();
   const getSingleData = async () => {
     const response = await fetch(
       `http://localhost:3000/api/get_post/${params?.update}`
@@ -30,18 +31,18 @@ const UpdatePost = ({ params }) => {
       email: post.email,
       price: priceValue,
     };
-    console.log(postData);
-    // const response = await fetch("http://localhost:3000/api/post_post", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify(postData),
-    // });
-    // const responseData = await response.json();
-    // if (responseData.massage === "success") {
-    //   alert("successful Add");
-    // } else [alert("Error")];
+    const response = await fetch(
+      `http://localhost:3000/api/get_post/${params?.update}`,
+      {
+        method: "PUT",
+        body: JSON.stringify(postData),
+      }
+    );
+    const responseData = await response.json();
+    if (responseData.success) {
+      alert("successful Add");
+      router.push("/post");
+    } else [alert("Error")];
   };
   return (
     <div>
