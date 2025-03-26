@@ -6,9 +6,7 @@ import { NextResponse } from "next/server";
 export const PUT = async (req, res) => {
   const id = res.params.postId;
   const payload = await req.json();
-  // await mongoose.connect(connectionString)
-  // const updatePost = BlogPostModel
-  console.log(payload);
-  console.log(id);
-  return NextResponse.json({ success: true });
+  await mongoose.connect(connectionString);
+  const updatePost = await BlogPostModel.findByIdAndUpdate(id, payload);
+  return NextResponse.json({ success: true, data: updatePost });
 };
