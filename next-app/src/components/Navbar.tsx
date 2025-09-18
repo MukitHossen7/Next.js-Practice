@@ -1,8 +1,14 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [query, setQuery] = useState("");
+  const handleChange = (e: any) => {
+    setQuery(e.target.value);
+  };
   return (
     <nav className="bg-gray-900 text-white shadow-md">
       <div className="container mx-auto flex justify-between items-center py-4 px-6">
@@ -13,6 +19,15 @@ const Navbar = () => {
 
         {/* Links */}
         <div className="hidden md:flex space-x-6">
+          <div>
+            <input
+              type="text"
+              value={query}
+              onChange={handleChange}
+              placeholder="Search..."
+              className="flex-grow outline-none"
+            />
+          </div>
           <Link href="/" className="hover:text-blue-400">
             Home
           </Link>
