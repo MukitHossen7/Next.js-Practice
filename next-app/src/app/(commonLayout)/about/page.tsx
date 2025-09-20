@@ -1,4 +1,10 @@
 import style from "./about.module.css";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Next App - About",
+  description: "This is About page",
+};
 const AboutPage = () => {
   return (
     <div>

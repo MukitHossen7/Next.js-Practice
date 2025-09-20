@@ -1,5 +1,11 @@
 import Image from "next/image";
-import blogImg from "../../../assets/image2.jpg";
+import blogImg from "@/assets/image2.jpg";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Next App - Blog",
+  description: "This is Blog page",
+};
 const BlogPage = () => {
   return (
     <div>
