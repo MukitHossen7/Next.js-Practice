@@ -8,7 +8,11 @@ export const metadata: Metadata = {
 };
 
 const ProductPage = async () => {
-  const res = await fetch("http://localhost:5000/products");
+  const res = await fetch("http://localhost:5000/products", {
+    next: {
+      revalidate: 30,
+    },
+  });
   const products = await res.json();
 
   return (
