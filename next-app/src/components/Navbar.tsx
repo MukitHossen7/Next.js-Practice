@@ -2,10 +2,12 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const Navbar = () => {
   const [query, setQuery] = useState("");
+  const pathname = usePathname();
   const handleChange = (e: any) => {
     setQuery(e.target.value);
   };
@@ -28,25 +30,74 @@ const Navbar = () => {
               className="flex-grow outline-none"
             />
           </div>
-          <Link href="/" className="hover:text-blue-400">
+          <Link
+            href="/"
+            className={`text-base font-medium transition-colors duration-200 ${
+              pathname === "/"
+                ? "text-blue-500 underline underline-offset-4"
+                : "text-gray-300 hover:text-blue-400 hover:underline hover:underline-offset-4"
+            }`}
+          >
             Home
           </Link>
-          <Link href="/product" className="hover:text-blue-400">
+          <Link
+            href="/product"
+            className={`text-base font-medium transition-colors duration-200 ${
+              pathname === "/product"
+                ? "text-blue-500 underline underline-offset-4"
+                : "text-gray-300 hover:text-blue-400 hover:underline hover:underline-offset-4"
+            }`}
+          >
             Product
           </Link>
-          <Link href="/dashboard" className="hover:text-blue-400">
+          <Link
+            href="/dashboard"
+            className={`text-base font-medium transition-colors duration-200 ${
+              pathname === "/dashboard"
+                ? "text-blue-500 underline underline-offset-4"
+                : "text-gray-300 hover:text-blue-400 hover:underline hover:underline-offset-4"
+            }`}
+          >
             Dashboard
           </Link>
-          <Link href="/about" className="hover:text-blue-400">
+          <Link
+            href="/about"
+            className={`text-base font-medium transition-colors duration-200 ${
+              pathname === "/about"
+                ? "text-blue-500 underline underline-offset-4"
+                : "text-gray-300 hover:text-blue-400 hover:underline hover:underline-offset-4"
+            }`}
+          >
             About
           </Link>
-          <Link href="/blog" className="hover:text-blue-400">
+          <Link
+            href="/blog"
+            className={`text-base font-medium transition-colors duration-200 ${
+              pathname === "/blog"
+                ? "text-blue-500 underline underline-offset-4"
+                : "text-gray-300 hover:text-blue-400 hover:underline hover:underline-offset-4"
+            }`}
+          >
             Blog
           </Link>
-          <Link href="/contact" className="hover:text-blue-400">
+          <Link
+            href="/contact"
+            className={`text-base font-medium transition-colors duration-200 ${
+              pathname === "/contact"
+                ? "text-blue-500 underline underline-offset-4"
+                : "text-gray-300 hover:text-blue-400 hover:underline hover:underline-offset-4"
+            }`}
+          >
             Contact
           </Link>
-          <Link href="/login" className="hover:text-blue-400">
+          <Link
+            href="/login"
+            className={`text-base font-medium transition-colors duration-200 ${
+              pathname === "/login"
+                ? "text-blue-500 underline underline-offset-4"
+                : "text-gray-300 hover:text-blue-400 hover:underline hover:underline-offset-4"
+            }`}
+          >
             Login
           </Link>
         </div>
