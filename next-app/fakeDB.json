@@ -1,0 +1,180 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "product_name": "Gaming Monitor",
+      "category": "Mobile",
+      "brand": "Corsair",
+      "price": 98.61,
+      "image": "https://i.rtings.com/assets/pages/lzrzcosQ/best-gaming-monitor-20230824-4-medium.jpg?format=auto"
+    },
+    {
+      "id": 2,
+      "product_name": "Wireless Mouse",
+      "category": "Networking",
+      "brand": "Corsair",
+      "price": 1319.06,
+      "image": "https://i.rtings.com/assets/pages/lzrzcosQ/best-gaming-monitor-20230824-4-medium.jpg?format=auto"
+    },
+    {
+      "id": 3,
+      "product_name": "Mechanical Keyboard",
+      "category": "Audio",
+      "brand": "Bose",
+      "price": 810.03,
+      "image": "https://i.rtings.com/assets/pages/lzrzcosQ/best-gaming-monitor-20230824-4-medium.jpg?format=auto"
+    },
+    {
+      "id": 4,
+      "product_name": "Gaming Chair",
+      "category": "Audio",
+      "brand": "HP",
+      "price": 442.48,
+      "image": "https://i.rtings.com/assets/pages/lzrzcosQ/best-gaming-monitor-20230824-4-medium.jpg?format=auto"
+    },
+    {
+      "id": 5,
+      "product_name": "Graphics Card",
+      "category": "Wearables",
+      "brand": "Oculus",
+      "price": 898.82,
+      "image": "https://i.rtings.com/assets/pages/lzrzcosQ/best-gaming-monitor-20230824-4-medium.jpg?format=auto"
+    },
+    {
+      "id": 6,
+      "product_name": "Processor",
+      "category": "Gaming",
+      "brand": "Lenovo",
+      "price": 1269.14,
+      "image": "https://i.rtings.com/assets/pages/lzrzcosQ/best-gaming-monitor-20230824-4-medium.jpg?format=auto"
+    },
+    {
+      "id": 7,
+      "product_name": "SSD Drive",
+      "category": "Networking",
+      "brand": "Samsung",
+      "price": 504.97,
+      "image": "https://i.rtings.com/assets/pages/lzrzcosQ/best-gaming-monitor-20230824-4-medium.jpg?format=auto"
+    },
+    {
+      "id": 8,
+      "product_name": "External Hard Drive",
+      "category": "Gaming",
+      "brand": "Logitech",
+      "price": 892.93,
+      "image": "https://i.rtings.com/assets/pages/lzrzcosQ/best-gaming-monitor-20230824-4-medium.jpg?format=auto"
+    },
+    {
+      "id": 9,
+      "product_name": "Smartphone",
+      "category": "Audio",
+      "brand": "HyperX",
+      "price": 439.6,
+      "image": "https://i.rtings.com/assets/pages/lzrzcosQ/best-gaming-monitor-20230824-4-medium.jpg?format=auto"
+    },
+    {
+      "id": 10,
+      "product_name": "Laptop",
+      "category": "Wearables",
+      "brand": "Lenovo",
+      "price": 689.89,
+      "image": "https://i.rtings.com/assets/pages/lzrzcosQ/best-gaming-monitor-20230824-4-medium.jpg?format=auto"
+    },
+    {
+      "id": 11,
+      "product_name": "Tablet",
+      "category": "Office",
+      "brand": "Nvidia",
+      "price": 922.8,
+      "image": "https://i.rtings.com/assets/pages/lzrzcosQ/best-gaming-monitor-20230824-4-medium.jpg?format=auto"
+    },
+    {
+      "id": 12,
+      "product_name": "Smartwatch",
+      "category": "Gaming",
+      "brand": "Logitech",
+      "price": 1257.47,
+      "image": "https://i.rtings.com/assets/pages/lzrzcosQ/best-gaming-monitor-20230824-4-medium.jpg?format=auto"
+    },
+    {
+      "id": 13,
+      "product_name": "Bluetooth Speaker",
+      "category": "Gaming",
+      "brand": "Oculus",
+      "price": 621.65,
+      "image": "https://i.rtings.com/assets/pages/lzrzcosQ/best-gaming-monitor-20230824-4-medium.jpg?format=auto"
+    },
+    {
+      "id": 14,
+      "product_name": "Wireless Earbuds",
+      "category": "Mobile",
+      "brand": "Corsair",
+      "price": 200.79,
+      "image": "https://i.rtings.com/assets/pages/lzrzcosQ/best-gaming-monitor-20230824-4-medium.jpg?format=auto"
+    },
+    {
+      "id": 15,
+      "product_name": "Webcam",
+      "category": "Office",
+      "brand": "Apple",
+      "price": 119.48,
+      "image": "https://i.rtings.com/assets/pages/lzrzcosQ/best-gaming-monitor-20230824-4-medium.jpg?format=auto"
+    },
+    {
+      "id": 16,
+      "product_name": "Microphone",
+      "category": "Wearables",
+      "brand": "Samsung",
+      "price": 1095.95,
+      "image": "https://i.rtings.com/assets/pages/lzrzcosQ/best-gaming-monitor-20230824-4-medium.jpg?format=auto"
+    },
+    {
+      "id": 17,
+      "product_name": "VR Headset",
+      "category": "Computers",
+      "brand": "Dell",
+      "price": 945.06,
+      "image": "https://i.rtings.com/assets/pages/lzrzcosQ/best-gaming-monitor-20230824-4-medium.jpg?format=auto"
+    },
+    {
+      "id": 18,
+      "product_name": "Router",
+      "category": "Electronics",
+      "brand": "MSI",
+      "price": 889.49,
+      "image": "https://i.rtings.com/assets/pages/lzrzcosQ/best-gaming-monitor-20230824-4-medium.jpg?format=auto"
+    },
+    {
+      "id": 19,
+      "product_name": "Power Bank",
+      "category": "Mobile",
+      "brand": "Razer",
+      "price": 1076.25,
+      "image": "https://i.rtings.com/assets/pages/lzrzcosQ/best-gaming-monitor-20230824-4-medium.jpg?format=auto"
+    },
+    {
+      "id": 20,
+      "product_name": "Portable Projector",
+      "category": "Audio",
+      "brand": "TP-Link",
+      "price": 1016.47,
+      "image": "https://i.rtings.com/assets/pages/lzrzcosQ/best-gaming-monitor-20230824-4-medium.jpg?format=auto"
+    },
+    {
+      "id": 21,
+      "product_name": "Portable Projector",
+      "category": "Audio",
+      "brand": "TP-Link",
+      "price": 1016.47,
+      "image": "https://i.rtings.com/assets/pages/lzrzcosQ/best-gaming-monitor-20230824-4-medium.jpg?format=auto"
+    },
+    {
+      "id": 22,
+      "product_name": "Portable Projector",
+      "category": "Audio",
+      "brand": "TP-Link",
+      "price": 1016.47,
+      "image": "https://i.rtings.com/assets/pages/lzrzcosQ/best-gaming-monitor-20230824-4-medium.jpg?format=auto"
+    }
+  ]
+}
