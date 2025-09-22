@@ -1,10 +1,10 @@
-import Button from "@/components/Button";
+import { Button } from "@/components/ui/button";
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="text-center">
       <h1 className="text-4xl">Next.js Home page</h1>
-      <Button buttonName="Dashboard" link="/dashboard" />
+      <Button>Click</Button>
     </div>
   );
 };
