@@ -1,5 +1,12 @@
 import BlogCard from "@/components/modules/Blogs/BlogCard";
 import { IBlogPost } from "@/types";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Next Blog | All Blogs",
+  description:
+    "Discover insightful articles, tutorials, and stories on Next Blog. Stay updated with the latest blogs across technology, programming, lifestyle, and more.",
+};
 
 const AllBlogsPage = async () => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/post`, {
