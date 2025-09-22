@@ -1,7 +1,7 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+import { IBlogPost } from "@/types";
 import Image from "next/image";
 
-export default async function BlogDetailsCard({ blog }: { blog: any }) {
+export default async function BlogDetailsCard({ blog }: { blog: IBlogPost }) {
   if (!blog) {
     return (
       <div className="py-20 text-center text-gray-500">Blog not found.</div>
@@ -9,7 +9,7 @@ export default async function BlogDetailsCard({ blog }: { blog: any }) {
   }
 
   return (
-    <main className="max-w-4xl mx-auto py-30 px-4">
+    <main className="max-w-4xl mx-auto py-10 px-4">
       <h1 className="text-5xl font-bold mb-6">{blog?.title}</h1>
 
       <div className="flex items-center gap-4 mb-8">
