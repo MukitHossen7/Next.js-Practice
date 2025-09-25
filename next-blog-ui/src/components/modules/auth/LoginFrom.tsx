@@ -1,5 +1,6 @@
 "use client";
 
+import { createLogin } from "@/actions/auth";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -13,9 +14,12 @@ import { Input } from "@/components/ui/input";
 import { signIn } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { FieldValues, useForm } from "react-hook-form";
+import { toast } from "sonner";
 
 const LoginFrom = () => {
+  const router = useRouter();
   const form = useForm<FieldValues>({
     defaultValues: {
       email: "",
@@ -23,8 +27,17 @@ const LoginFrom = () => {
     },
   });
 
-  const onSubmit = (values: FieldValues) => {
-    console.log(values);
+  const onSubmit = async (values: FieldValues) => {
+    try {
+      const result = await createLogin(values);
+      if (result.success) {
+        toast.success("Logged In Successful");
+        router.push("/");
+      }
+    } catch (error) {
+      console.error(error);
+      toast.error("Logged In Failed");
+    }
   };
 
   const handleSocialLogin = (provider: "google" | "github") => {
