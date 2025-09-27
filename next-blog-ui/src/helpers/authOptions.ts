@@ -75,8 +75,39 @@ export const authOptions: NextAuthOptions = {
     }),
   ],
   callbacks: {
+    async signIn({ user, account }) {
+      try {
+        if (!user?.email) return false;
+        const res = await fetch(
+          `${process.env.NEXT_PUBLIC_BASE_API}/auth/google`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              name: user.name,
+              email: user.email,
+              image: user.image,
+              provider: account?.provider,
+              providerId: account?.providerAccountId,
+            }),
+          }
+        );
+        if (!res.ok) {
+          console.error("Failed to save user in backend", await res.text());
+          return false;
+        }
+        const data = await res.json();
+        user.id = data?.data?.id;
+        return true;
+      } catch (error) {
+        console.error("Error saving user:", error);
+        return false;
+      }
+    },
     async jwt({ token, user }) {
-      if (user) {
+      if (user && user.id) {
         token.id = user?.id;
       }
       return token;
